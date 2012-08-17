@@ -1,0 +1,17 @@
+#tetris-stage {
+    margin: auto;
+    width: 300;
+}
+
+.tetris-stage-row {
+    margin: 3px;
+    clear: both;
+}
+
+.tetris-stage-unit {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 3px;
+    background-color: blue;
+}
