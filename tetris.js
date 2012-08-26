@@ -69,6 +69,15 @@ function Block (units, initialPosition) {
   }
 }
 
+function appendEventListener(element, type, func, capture) {
+    var ret = undefined;
+    if (element.addEventListener) {
+        element.addEventListener(type, func, capture);
+    } else if (element.attachEvent) {
+        element.attachEvent("on" + type, func);
+    }
+}
+
 function arrayContains(array, element) {
   for (var i = 0; i < array.length; i++) {
     if (array[i] == element)
@@ -172,11 +181,11 @@ function initStage() {
     }
   }
   
-  document.addEventListener('keydown', onKeyDown);
+  appendEventListener(document, 'keydown', onKeyDown);
   
   var startButton = document.createElement('button');
   startButton.innerText = 'start';
-  startButton.addEventListener('click', initGame);
+  appendEventListener(startButton, 'click', initGame);
   stageDOM.appendChild(startButton);
   var scoreBox = document.createElement('div');
   scoreBox.id = 'scoreBox';
