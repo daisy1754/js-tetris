@@ -77,21 +77,21 @@ function arrayContains(array, element) {
   return false;
 }
 
-const BLOCK_TYPE_BOX = 0;
-const BLOCK_TYPE_BAR = 1;
-const BLOCK_TYPE_L = 2;
-const BLOCK_TYPE_T = 3;
-const BLOCK_TYPE_L_REVERSE = 4;
-const BLOCK_TYPE_Z = 5;
-const BLOCK_TYPE_Z_REVERSE = 6;
-const NUMBER_OF_BLOCK_TYPES = 7;
+var BLOCK_TYPE_BOX = 0;
+var BLOCK_TYPE_BAR = 1;
+var BLOCK_TYPE_L = 2;
+var BLOCK_TYPE_T = 3;
+var BLOCK_TYPE_L_REVERSE = 4;
+var BLOCK_TYPE_Z = 5;
+var BLOCK_TYPE_Z_REVERSE = 6;
+var NUMBER_OF_BLOCK_TYPES = 7;
 
-const STAGE_WIDTH = 8;
-const STAGE_HEIGHT = 12;
+var STAGE_WIDTH = 8;
+var STAGE_HEIGHT = 12;
 
-const GAME_STATE_INIT = 0;
-const GAME_STATE_PLAYING = 1;
-const GAME_STATE_OVER = 2;
+var GAME_STATE_INIT = 0;
+var GAME_STATE_PLAYING = 1;
+var GAME_STATE_OVER = 2;
 
 game = {};
 game.stage_filled = new Array(STAGE_HEIGHT);
@@ -132,10 +132,10 @@ function stageUnitId (x, y) {
   return 'stageUnit-' + x + '-' + y;
 }
 
-const KEYCODE_SPACE = 32;
-const KEYCODE_LEFT = 37;
-const KEYCODE_RIGHT = 39;
-const KEYCODE_DOWN = 40;
+var KEYCODE_SPACE = 32;
+var KEYCODE_LEFT = 37;
+var KEYCODE_RIGHT = 39;
+var KEYCODE_DOWN = 40;
 function onKeyDown(event) {
   switch (event.keyCode) {
     case KEYCODE_LEFT:
