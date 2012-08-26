@@ -237,7 +237,7 @@ function drawStage() {
     for (var x = 0; x < STAGE_WIDTH; x++) {
       var unit = document.getElementById(stageUnitId(x, y));
       var color = game.stage_filled[y][x] ? "black" : "blue";
-      unit.style['background-color'] = color;
+      unit.style.backgroundColor = color;
     }
   }
   
@@ -246,7 +246,7 @@ function drawStage() {
     for (var i = 0; i < 4; i++) {
       var element = document.getElementById(stageUnitId(
         blockUnits[i].x, blockUnits[i].y));
-      element.style['background-color'] = "red";
+      element.style.backgroundColor = "red";
     }
   }
   
