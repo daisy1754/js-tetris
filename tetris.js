@@ -82,12 +82,12 @@ function Block (units, initialPosition) {
 }
 
 function appendEventListener(element, type, func, capture) {
-    var ret = undefined;
-    if (element.addEventListener) {
-        element.addEventListener(type, func, capture);
-    } else if (element.attachEvent) {
-        element.attachEvent("on" + type, func);
-    }
+  var ret = undefined;
+  if (element.addEventListener) {
+    element.addEventListener(type, func, capture);
+  } else if (element.attachEvent) {
+    element.attachEvent("on" + type, func);
+  }
 }
 
 function arrayContains(array, element) {
