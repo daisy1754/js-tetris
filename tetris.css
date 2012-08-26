@@ -2,6 +2,10 @@
   margin: auto;
   width: 300;
 }
+#description {
+  margin: auto;
+  width: 300;
+}
 
 .tetris-stage-row {
   margin: 3px;
