@@ -1,3 +1,15 @@
+// add innerText property for Firefox, 
+//thanks to http://tmlife.net/programming/javascript/firefox-can-use-innertext.html
+(function(){
+  var tmp = document.createElement("div");
+  if (tmp.innerText == undefined) {
+    Object.defineProperty(HTMLElement.prototype, "innerText", {
+      get: function() { return this.textContent; },
+      set: function(val) { this.textContent = val; }
+    });
+  }
+})();
+
 function BlockUnit(x, y) {
   this.x = x;
   this.y = y;
