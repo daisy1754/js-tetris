@@ -73,6 +73,8 @@ function Block (units, initialPosition) {
   // and relative positions of other three units.
   this.position = initialPosition;
   this.units = units;
+  // 絶対座標として４つの正方形の位置の配列を返す
+  // returns array of absolute positions of four block units.
   this.getUnitsPositions = function() {
     var array = new Array(4);
     array[0] = new BlockUnit(this.position.x, this.position.y);
@@ -240,6 +242,8 @@ function initGame() {
 function doTurn() {
   if (game.currentBlock) {
     if (!game.currentBlock.fall(game.stage_filled)) {
+      // currentBlockが設置した
+      // when currentBlock touches ground or other blocks
       evaluate();
     }
   } else {
