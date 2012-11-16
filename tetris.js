@@ -79,7 +79,7 @@ function Block (units, initialPosition) {
     var array = new Array(4);
     array[0] = new BlockUnit(this.position.x, this.position.y);
     for (var i = 0; i < 3; i++) {
-      array[1 + i] = addBlockUnit(this.position, this.units[i]);
+      array[i] = addBlockUnit(this.position, this.units[i]);
     }
     return array;
   }
