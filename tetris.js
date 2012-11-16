@@ -131,7 +131,7 @@ function Block (units, initialPosition) {
       var nextY = positions[i].y + delta.y;
       if (nextY < 0 || nextX < 0 || nextX >= STAGE_WIDTH)
         return false;
-      if (stage_filled[nextY][nextX])
+      if (stage_filled['nextY']['nextX'])
         return false;
     }
     return true;
