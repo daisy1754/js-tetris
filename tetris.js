@@ -178,12 +178,13 @@ function createNewBlock() {
 // ----------------------- utility functions -----------------------------------
 // 複数ブラウザに対応するためのイベント追加関数
 // event adding class that care for browser dependency.
-function appendEventListener(element, type, func, capture) {
-  if (element.addEventListener) {
+
+if (element.addEventListener) {
+  function appendEventListener(element, type, func, capture) {
     element.addEventListener(type, func, capture);
-  } else if (element.attachEvent) {
-    element.attachEvent("on" + type, func);
   }
+} else if (element.attachEvent) {
+  element.attachEvent("on" + type, func);
 }
 
 function arrayContains(array, element) {
