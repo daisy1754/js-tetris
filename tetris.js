@@ -113,7 +113,7 @@ function Block (units, initialPosition) {
     var rotatedUnits = new Array(3);
     rotatedPositions[0] = this.position;
     for (var i = 0; i < 3; i++) {
-      rotatedUnits[i] = new BlockUnit(this.units[i].y, -this.units[i].x);
+      rotatedUnits[i] = new BlockUnit(this.units[i][y], -this.units[i][x]);
       rotatedPositions[1 + i]
         = new BlockUnit(this.position.x + rotatedUnits[i].x,
           this.position.y + rotatedUnits[i].y);
