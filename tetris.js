@@ -4,7 +4,7 @@
 // FirefoxではinnerTextプロパティが無いので，対応としてinnerTextプロパティが無いときは定義している．
 (function(){
   var tmp = document.createElement("div");
-  if (tmp.innerText == undefined) {
+  if (tmp.innerText == 'undefined') {
     Object.defineProperty(HTMLElement.prototype, "innerText", {
       get: function() { return this.textContent; },
       set: function(val) { this.textContent = val; }
@@ -47,7 +47,7 @@ for (var y = 0; y < STAGE_HEIGHT; y++) {
 }
 game.score = 0;
 game.state = GAME_STATE_INIT;
-game.currentBlock = undefined;
+game.currentBlock = 'undefined';
 // ----------------------------------------------------------------------------
 
 // ------------------ テトリスブロックを表すクラスたちの定義 --------------------------------
@@ -350,7 +350,7 @@ function evaluate() {
       game.stage_filled[y][x] = false;
   }
   
-  game.currentBlock = undefined;
+  game.currentBlock = 'undefined';
   game.score += getScore(skipCount);
   
   if (game.stage_filled[STAGE_HEIGHT - 1][STAGE_WIDTH / 2]) {
