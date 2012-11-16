@@ -332,7 +332,7 @@ function evaluate() {
   
   // 揃っている列を削除(実際には他の列をシフト)している
   // removing the block units by shifting block units
-  var skipCount = 0;
+  var skipCount = undefined;
   for (var y = 0; y < STAGE_HEIGHT; y++) {
     var shouldSkipRow = false;
     if (arrayContains(filledRow, y)) {
