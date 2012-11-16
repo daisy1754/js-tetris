@@ -364,12 +364,12 @@ function initStage() {
   var stageDOM = document.getElementById('tetris-stage');
   for (var y = STAGE_HEIGHT - 1; y >= 0; y--) {
     var row = document.createElement('div');
-    row.className = 'tetris-stage-row';
-    row.id = row.className + '-' + y;
+    row.class = 'tetris-stage-row';
+    row.id = row.class + '-' + y;
     stageDOM.appendChild(row);
     for (var x = 0; x < STAGE_WIDTH; x++) {
       var stageUnit = document.createElement('div');
-      stageUnit.className = 'tetris-stage-unit';
+      stageUnit.class = 'tetris-stage-unit';
       stageUnit.id = stageUnitId(x, y);
       row.appendChild(stageUnit);
     }
