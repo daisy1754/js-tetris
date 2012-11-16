@@ -252,6 +252,7 @@ function doTurn() {
   drawStage();
   if (game.state == GAME_STATE_PLAYING)
     setTimeout(doTurn, 300);
+  }
 }
 
 function drawStage() {
