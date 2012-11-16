@@ -111,7 +111,9 @@ function Block (units, initialPosition) {
   this.tryToRotate = function(stage_filled) {
     var rotatedPositions = new Array(4);
     var rotatedUnits = new Array(3);
-    rotatedPositions[0] = this.position;
+    rotatedPositions[0] = (function () {
+      return this.position;
+    }());
     for (var i = 0; i < 3; i++) {
       rotatedUnits[i] = new BlockUnit(this.units[i].y, -this.units[i].x);
       rotatedPositions[1 + i]
