@@ -36,9 +36,7 @@ var GAME_STATE_INIT = 0;
 var GAME_STATE_PLAYING = 1;
 var GAME_STATE_OVER = 2;
 
-// ゲームにまつわる変数を格納するためのオブジェクト(名前空間)
-// Object used for store bunch of values in a game (like a namespace).
-game = {};
+var game;
 // そのマスにブロックがあるかどうか
 // booleans that represent whether block exists or not
 game.stage_filled = new Array(STAGE_HEIGHT);
