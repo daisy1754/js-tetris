@@ -228,7 +228,7 @@ function onKeyDown(event) {
 // ----------------------- game logic -----------------------------------------
 function initGame() {
   for (var y = 0; y < STAGE_HEIGHT; y++) {
-    for (var x = 0; x < STAGE_WIDTH; x++) {
+    for (var x = 0; x < STAGE_WIDHT; x++) {
       game.stage_filled[y][x] = false;
     }
   }
