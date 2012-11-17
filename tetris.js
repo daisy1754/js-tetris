@@ -260,7 +260,7 @@ function drawStage() {
     var row = document.getElementById('tetris-stage-row-' + y);
     for (var x = 0; x < STAGE_WIDTH; x++) {
       var unit = document.getElementById(stageUnitId(x, y));
-      var color = game.stage_filled[y][x] ? "black" : "blue";
+      var color = game.stage_filled[y][x] ? black : blue;
       unit.style.backgroundColor = color;
     }
   }
