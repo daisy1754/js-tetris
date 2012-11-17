@@ -99,7 +99,7 @@ function Block (units, initialPosition) {
       delta = {x: 0, y: -1};
     }
   
-    if (this.canExist(stage_filled, this.getUnitsPositions(), delta)) {
+    if (this.canExist(stage_filled, this.getUnitsPositions, delta)) {
       this.position = addBlockUnit(this.position, delta);
       return true;
     } else {
