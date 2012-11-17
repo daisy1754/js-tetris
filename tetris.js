@@ -92,11 +92,20 @@ function Block (units, initialPosition) {
   this.tryToMove = function(aim, stage_filled) {
     var delta;
     if (aim.direction == "left") {
-      delta = {x: -1, y: 0};
+      delta = {
+        x: -1
+        y: 0
+      };
     } else if (aim.direction == "right") {
-      delta = {x: 1, y: 0};
+      delta = {
+        x: 1,
+        y: 0
+      };
     } else if (aim.direction == "down") {
-      delta = {x: 0, y: -1};
+      delta = {
+        x: 0,
+        y: -1
+      };
     }
   
     if (this.canExist(stage_filled, this.getUnitsPositions(), delta)) {
