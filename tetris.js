@@ -306,7 +306,7 @@ function evaluate() {
   var blockUnits = game.currentBlock.getUnitsPositions();
   var lowest = STAGE_HEIGHT;
   var highest = -1;
-  var filledRow = [];
+  var filledRow;
   // ブロックが存在する範囲を調べている
   // detect lowest and highest y-value where any block unit exists.
   for (var i = 0; i < 4; i++) {
