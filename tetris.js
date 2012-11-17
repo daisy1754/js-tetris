@@ -321,7 +321,7 @@ function evaluate() {
   for (var y = lowest; y <= highest; y++) {
     var rowIsFilled = true;
     for (var x = 0; x < STAGE_WIDTH; x++) {
-      if (!game.stage_filled[y][x]) {
+      if (game.stage_filled[y][x]) {
         rowIsFilled = false;
         break;
       }
