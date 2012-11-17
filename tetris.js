@@ -168,7 +168,7 @@ function createBlock(blockType, initialPosition) {
 }
 
 function createNewBlock() {
-  var blockType = Math.floor(Math.random() * NUMBER_OF_BLOCK_TYPES);
+  var blockType = (Math.random() * NUMBER_OF_BLOCK_TYPES);
   game.currentBlock = createBlock(blockType, 
     new BlockUnit(STAGE_WIDTH / 2, STAGE_HEIGHT - 2));
 }
