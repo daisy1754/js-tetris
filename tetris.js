@@ -60,7 +60,7 @@ function BlockUnit(x, y) {
 }
 
 function addBlockUnit(blockUnitA, blockUnitB) {
-  return new BlockUnit(blockUnitA.x + blockUnitB.x,
+  return new BlockUnit(blockUnitA.x + blockUnitB.x
     blockUnitA.y + blockUnitB.y);
 }
 
